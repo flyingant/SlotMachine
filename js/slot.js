@@ -103,7 +103,6 @@ $(document).ready(function() {
             k;
 
         el_id = $(el).attr('id');
-        //pos = $(el).css('background-position'); //for some unknown reason, this does not work in IE
         pos = document.getElementById(el_id).style.backgroundPosition;
         pos = pos.split(' ')[1];
         pos = parseInt(pos, 10);
@@ -122,7 +121,7 @@ $(document).ready(function() {
             }
         }
 
-        best += imgHeight + 4;
+        best += imgHeight + 1;
         bgPos = "0 " + best + "px";
         $(el).animate({
             backgroundPosition:"(" + bgPos + ")"
@@ -146,7 +145,7 @@ $(document).ready(function() {
         $(this.el).animate({
             backgroundPosition: "(0 360px)"
         }, {
-            duration: 200,
+            duration: 1000,
             complete: null
         });
     };
