@@ -8,71 +8,77 @@
 <script src="js/jquery.backgroundPosition.js"></script>
 <script src="js/slot.js"></script>
 <style>
-    <style>
+
 body {
-	font-family:verdana,arial;
-	padding:20px;
+	position: relative;
 }
-.bd {
-	text-align:center;
+
+#machine {
+	position: absolute;
+	width: 845px;
+	height: 933px;
+	top: 50%;
+	left: 50%;
+	margin-left: -345px;
+	z-index: 100;
+	background: url("images/slotmachine.png") no-repeat;
 }
-.container {
-	margin:0 auto;
-}
+
 .slot-wrapper {
-	 border: 1px solid #000000;
+	position: absolute;
+	width: 600px;
+	left: 50px;
+	top: 400px;
 }
+
 .slot {
 	background:url("images/numbers_normal.png") repeat-y;
-	width:180px;
-	height:200px;
+	background-position-y: 360px;
+	width: 180px;
+	height: 360px;
+	margin-right: 20px;
+	border-radius: 10px;
 	float:left;
-	border:1px solid #000;
-	background-position:0 4px;
 }
+
 .motion {
 	background:url("images/numbers_blur.png") repeat-y;
+	background-position-y: 360px;
 }
-button {
-	display:block;
-	width:138px;
-	height:33px;
-	margin:20px 60px;
-	font-size:16px;
-	cursor:pointer;
+
+.control {
+	position: absolute;
+	bottom: -200px;
+	left: 60px;
+	width: 542px;
+	height: 171px;
+	border-radius: 10px;
+	cursor: pointer;
 }
-#result {
-	margin:20px 0;
-	font-size:18px;
-	font-weight:bold;
-	height:22px;
+
+.control.start {
+	background: url("images/start.png") no-repeat;
 }
-.credits {
-	font-size:15px;
-	margin-top:20px;
+
+.control.reset {
+	background: url("images/reset.png") no-repeat;
 }
-.credits .browsers {
-	font-style:italic;
-	font-size:14px;
-	color:#777;
-	margin-top:4px;
+
+.control.stop {
+	background: url("images/stop.png") no-repeat;
 }
-.clear {
-	clear:both;
-}
+
+
 </style>
 </head>
 <body>
-<div class="bd">
-	<div class="container">
-		<div class="slot-wrapper">
-			<div id="slot1" class="slot"></div>
-			<div id="slot2" class="slot"></div>
-			<div id="slot3" class="slot"></div>
-			<div class="clear"></div>
-		</div>
-		<div><button id="control">Start</button></div>
+<div id="machine">
+	<div class="slot-wrapper">
+		<div id="slot1" class="slot"></div>
+		<div id="slot2" class="slot"></div>
+		<div id="slot3" class="slot"></div>
 	</div>
+	<button class="control start"></button>
 </div>
 </body>
 </html>
