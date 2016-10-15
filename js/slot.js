@@ -190,8 +190,8 @@ $(document).ready(function() {
                     b.stop();
                     window.setTimeout(function () {
                         c.stop();
-                    }, 6 * 1000)
-                }, 3 * 1000)
+                    }, 6 * 100)
+                }, 3 * 100)
             }, 1 * 100)
 
             disableControl(); //disable control until the slots stop
